@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dictator Protocol — $5.45 | 14-Day Total Body Transformation</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0a0a0a;
+            --charcoal: #1a1a1a;
+            --light: #f5f5f0;
+            --accent: #c0392b;
+            --text: #e8e8e3;
+            --muted: #888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark) 100%);
+            border-bottom: 2px solid var(--gold);
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .logo span {
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.95)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23111" width="100" height="100"/><path d="M0 50 L100 50 M50 0 L50 100" stroke="%23222" stroke-width="0.5"/></svg>');
+            padding: 80px 0 60px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 8px 20px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            border-radius: 2px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        h1 .highlight {
+            color: var(--gold);
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+
+        .book-mockup {
+            width: 280px;
+            height: 380px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border: 2px solid var(--gold);
+            margin: 0 auto 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(212,175,55,0.1);
+        }
+
+        .book-mockup::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 12px;
+            background: linear-gradient(to right, #3a3a3a, #1a1a1a);
+            border-right: 1px solid #444;
+        }
+
+        .book-title {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .book-title .line1 {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .book-title .line2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .book-title .line3 {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        /* Price & Buy Section */
+        .buy-section {
+            background: var(--charcoal);
+            padding: 60px 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        .buy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .buy-content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .buy-content p {
+            color: var(--muted);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #ccc;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .price-box {
+            background: var(--dark);
+            border: 1px solid #333;
+            padding: 40px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--gold), #b8960c);
+            color: var(--dark);
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212,175,55,0.3);
+        }
+
+        .guarantee {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .guarantee strong {
+            color: var(--gold);
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: var(--dark);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: var(--text);
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--charcoal);
+            border: 1px solid #2a2a2a;
+            padding: 35px;
+            border-radius: 4px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Quote */
+        .quote-section {
+            background: var(--charcoal);
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        blockquote footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: var(--gold);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Sticky bottom bar for mobile */
+        .sticky-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--charcoal);
+            border-top: 2px solid var(--gold);
+            padding: 12px 20px;
+            z-index: 1000;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sticky-bar .sticky-price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .sticky-bar .sticky-btn {
+            padding: 10px 24px;
+            background: var(--gold);
+            color: var(--dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            padding: 40px 0;
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .buy-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .book-mockup {
+                width: 240px;
+                height: 320px;
+            }
+
+            .price-box {
+                padding: 25px;
+            }
+
+            .sticky-bar {
+                display: flex;
+            }
+
+            body {
+                padding-bottom: 70px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero .container > * {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .hero .container > *:nth-child(1) { animation-delay: 0.1s; }
+        .hero .container > *:nth-child(2) { animation-delay: 0.2s; }
+        .hero .container > *:nth-child(3) { animation-delay: 0.3s; }
+        .hero .container > *:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">DIKTATOR <span>PROTOCOL</span></div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="badge">Digital Download — Instant Access</div>
+        <h1>
+            Transform Your Body in 14 Days
+            <span class="highlight">Written in a Language Only Discipline Can Decode</span>
+        </h1>
+        <p class="subtitle">
+            A complete fat-loss, water-manipulation, and physique-sharpening protocol — encoded entirely in Dictator, a constructed language designed for absolute precision and zero excuses.
+        </p>
+
+        <div class="book-mockup">
+            <div class="book-title">
+                <div class="line1">The Dictator</div>
+                <div class="line2">Protocol</div>
+                <div class="line3">14-Day Supreme Regimen</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="buy-section">
+    <div class="container">
+        <div class="buy-grid">
+            <div class="buy-content">
+                <h2>What You Get</h2>
+                <p>
+                    No starter kit. No trial chapter. The full protocol, the complete language reference, and every day mapped out for $5.45. You either commit or you don't.
+                </p>
+                <ul class="checklist">
+                    <li>Complete Dictator language grammar & 200+ word dictionary</li>
+                    <li>Day-by-day 14-day meal, workout & hydration schedule</li>
+                    <li>4-phase metabolic map: Priming → Acceleration → Intensification → Peak</li>
+                    <li>Water mastery: sodium cycling, natural diuretics, anti-bloat protocol</li>
+                    <li>12-exercise bodyweight library with form cues</li>
+                    <li>Sleep architecture & 10-point Dictator mindset system</li>
+                </ul>
+                <p style="color: var(--gold); font-weight: 600;">
+                    PDF download. Read on any device. Start immediately.
+                </p>
+            </div>
+
+            <div class="price-box">
+                <div class="price-tag">$5.45</div>
+                <p class="price-note">One-time payment. No subscriptions.</p>
+                <a href="https://payhip.com/b/nre2D" class="btn" target="_blank">Buy Now — Instant Download</a>
+                <p class="guarantee">
+                    <strong>Secure checkout</strong> via PayHip. Your download link is delivered immediately after payment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Inside <span>The Protocol</span></h2>
+        <div class="grid-3">
+            <div class="feature-card">
+                <div class="feature-icon">📜</div>
+                <h3>The Complete Language</h3>
+                <p>Full grammar reference, 200+ word dictionary, and pronunciation guide. Learn to read your own training orders in a language built for precision.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>14-Day Day-by-Day Plan</h3>
+                <p>Exact meals, workout circuits, hydration timing, and sodium cycling for peak definition. No guessing. No "listen to your body." Just execute.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💧</div>
+                <h3>Water Mastery System</h3>
+                <p>Strategic hydration, natural diuretics, and the "whoosh" protocol to drop subcutaneous water weight without dangerous dehydration.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔥</div>
+                <h3>HIIT + Resistance Library</h3>
+                <p>12 bodyweight exercises with form cues, progressive overload rules, and warm-up/cool-down protocols. Gym not required.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Sleep & Mindset Architecture</h3>
+                <p>The 10-principle Dictator mentality, cortisol management, and a recovery system that protects muscle while stripping fat.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>4-Phase Metabolic Map</h3>
+                <p>Metabolic priming → Acceleration → Intensification → Peak Protocol. Each phase shifts macros and training to prevent adaptation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quote-section">
+    <div class="container">
+        <blockquote>
+            "The language isn't a gimmick. It's a filter. If you can learn enough to read the daily orders, you have already proven you have the discipline to follow them."
+            <footer>— The Author</footer>
+        </blockquote>
+    </div>
+</section>
+
+<!-- Mobile sticky buy bar -->
+<div class="sticky-bar">
+    <div class="sticky-price">$5.45</div>
+    <a href="https://payhip.com/b/nre2D" class="sticky-btn" target="_blank">Buy Now</a>
+</div>
+
+<footer>
+    <div class="container">
+        <p> The Dictator Protocol. All rights reserved.</p>
+        <p style="margin-top: 10px;">This is a fitness education product. Results require execution. Consult a physician before beginning any training or nutrition protocol.</p>
+    </div>
+</footer>
+
+</body>
+</html>
